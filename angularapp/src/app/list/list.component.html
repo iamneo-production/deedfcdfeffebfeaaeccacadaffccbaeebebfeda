@@ -8,20 +8,20 @@
     <button id="newFood" (click)="enableUserToAddFood()" class="new-food-button">Add New Food</button>
     <br>
     <form *ngIf="isEditing">
-      <div id="name">
+      <div>
         <br>
         <label for="new-food-name">Name </label>
-        <input type="text" [(ngModel)]="newFoodName">
+        <input id="name" type="text" [(ngModel)]="newFoodName">
         <br> <br>
       </div>
-      <div id="calories">
+      <div>
         <label for="new-food-calories">Calories </label>
-        <input type="text" [(ngModel)]="newFoodCalories">
+        <input id="calories" type="text" [(ngModel)]="newFoodCalories">
         <br> <br>
       </div>
-      <div id="image">
+      <div>
         <label for="new-food-name">Image </label>
-        <input type="text" [(ngModel)]="newFoodImage">
+        <input id="image" type="text" [(ngModel)]="newFoodImage">
         <br> <br>
       </div>
 
