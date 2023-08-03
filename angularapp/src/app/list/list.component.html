@@ -1,7 +1,7 @@
 <div class="foods">
   <div class="search-box">
     <label for="food-search">Search</label>
-    <input id="food-search" type="text" [(ngModel)]="pattern">
+    <input id="searchBox" type="text" [(ngModel)]="pattern">
   </div>
 
   <div class="new-food">
@@ -11,21 +11,21 @@
       <div>
         <br>
         <label for="new-food-name">Name </label>
-        <input type="text" [(ngModel)]="newFoodName">
+        <input type="text" id="name" [(ngModel)]="newFoodName">
         <br> <br>
       </div>
       <div>
         <label for="new-food-calories">Calories </label>
-        <input type="text" [(ngModel)]="newFoodCalories">
+        <input type="text" id="calories" [(ngModel)]="newFoodCalories">
         <br> <br>
       </div>
       <div>
         <label for="new-food-name">Image </label>
-        <input type="text" [(ngModel)]="newFoodImage">
+        <input type="text" id="image" [(ngModel)]="newFoodImage">
         <br> <br>
       </div>
 
-      <button (click)="newFood()" class="add-button">Add Food</button>
+      <button id="newFood" (click)="newFood()" class="add-button">Add Food</button>
     </div>
   </div>
 
@@ -54,7 +54,7 @@
 
 </div>
 
-<div class="my-food-list">
+<div class="my-food-list" id="totalCalories">
   <h2>Today's Foods <small>{{ totalCalories }} cal</small></h2>
   <ul>
     <li *ngFor="let food of myList">
