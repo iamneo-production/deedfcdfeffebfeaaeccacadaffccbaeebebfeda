@@ -6,20 +6,20 @@ import List from '../food';
   styleUrls: ['./list.component.css'],
 })
 export class ListComponent implements OnInit {
-  foods: Object[];
+  foods!: Object[] ;
   myList: {
     name: string;
     calories: number;
     quantity: number;
     image: string;
   }[] = [];
-  pattern: string;
+  pattern!: string;
   isEditing: boolean = false;
   newFoodName: string = 'Example Name';
   newFoodCalories: number = 250;
   newFoodImage: string =
     'https://pngimg.com/uploads/kfc_food/kfc_food_PNG57.png';
-  quantity: number;
+  quantity!: number ;
   totalCalories: number = 0;
 
   constructor() {}
@@ -48,7 +48,7 @@ export class ListComponent implements OnInit {
     this.newFoodImage = '';
   }
 
-  addList(food, quantityInput) {
+  addList(food:any, quantityInput:any) {
     const existingFood = this.myList.find((item) => item.name === food.name);
     const quantity = Number(quantityInput.value);
 
