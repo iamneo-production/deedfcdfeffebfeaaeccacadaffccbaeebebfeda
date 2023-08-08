@@ -7,11 +7,11 @@
     <div class="new-container">
   
       <div class="add-food-container">
-        <h2 id="newFood"> <span> Add New Food </span></h2>
+        <h2> <span> Add New Food </span></h2>
         Name: <input type="text" name="name" [(ngModel)] = "newFoodName" id="name"> <br><br>
         Calories: <input type="text" name="cal" [(ngModel)] = "newFoodCalories" id="calories"> <br><br>
         Image: <input type="text" name="img" [(ngModel)] = "newFoodImage" id="image"> <br><br>
-        <button type="button" (click) = "addFood()">Add Food</button> <br><br>
+        <button type="button" (click) = "addFood()"  id="newFood">Add Food</button> <br><br>
       </div>
   
       <div class="display-food-container" id="displayContainer">
