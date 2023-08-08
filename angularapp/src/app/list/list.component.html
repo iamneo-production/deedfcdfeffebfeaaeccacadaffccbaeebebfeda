@@ -1,4 +1,4 @@
-<div class="foods" id="displayContainer">
+<div class="foods">
     <div class="search-box">
       <label for="food-search">Search</label>
       <input id="searchBox" type="text" [(ngModel)]="pattern">
@@ -7,7 +7,7 @@
     <div class="new-food">
       <button id="newFood" (click)="enableUserToAddFood()" class="new-food-button">Add New Food</button>
       <br>
-      <div *ngIf="isEditing">
+      <div>
         Name: <input type="text" name="name" [(ngModel)] = "newFoodName" id="name"> <br><br>
         Calories: <input type="text" name="cal" [(ngModel)] = "newFoodCalories" id="calories"> <br><br>
         Image: <input type="text" name="img" [(ngModel)] = "newFoodImage" id="image"> <br><br>
@@ -16,6 +16,7 @@
       </div>
     </div>
   
+    <div id="displayContainer">
     <ul class="food-list">
       <li class="single-food" *ngIf="isEditing">
         <img [src]="newFoodImage">
@@ -38,6 +39,8 @@
         <button (click)="addList(food, quantity)" class="add-button-list"> Add </button>
       </li>
     </ul>
+
+</div>
   
   </div>
   
